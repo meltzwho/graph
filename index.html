@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="lib/jquery.js"></script>
+  <script src="lib/graph.js"></script>
+  <script src="lib/underscore.js"></script>
+  <script src="lib/cytoscape.js"></script>
+  <script src="app.js"></script>
+  <link href="ss.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="control">
+    <div class="btnNode">
+      <button id="addNode">Add node</button>
+      <button id="rmNode">Remove node</button>
+    </div>
+    <textarea id="value">...node value</textarea>
+    <div class="btnEdge">
+      <button id="addEdge">Add edge</button>
+      <button id="rmEdge">Remove edge</button>
+    </div>
+    <textarea id="edge">[FROM NODE]:[TO NODE]</textarea>
+  </div>
+  <div id="graph"></div>
+</body>
+
+</html>
