@@ -110,7 +110,7 @@ $(document).ready(function () {
   $('#value').focusout(function () {
     setTimeout(function () {
       $('#value').val('...node value');
-    }, 100);
+    }, 50);
   });
 
   $('#edge').focusin(function () {
@@ -120,7 +120,7 @@ $(document).ready(function () {
   $('#edge').focusout(function () {
     setTimeout(function () {
       $('#edge').val('[FROM NODE]:[TO NODE]');
-    }, 100);
+    }, 50);
   });
 
   var random = function () {
