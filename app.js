@@ -2,7 +2,24 @@ $(document).ready(function () {
   var cy = cytoscape({
     container: $('#graph'),
 
-    elements: [],
+    elements: [{
+      group: 'nodes',
+      data: {
+        id: 'a'
+      }
+    }, {
+      group: 'nodes',
+      data: {
+        id: 'b'
+      }
+    }, {
+      group: 'edges',
+      data: {
+        id: 'e',
+        source: 'a',
+        target: 'b'
+      }
+    }],
 
     style: [{
       selector: 'node',
@@ -49,6 +66,7 @@ $(document).ready(function () {
     var key = parseVal();
     if (cy.$id(key).empty() && key !== '...node value' &&
       key) {
+      console.log('a');
       cy.add({
         group: 'nodes',
         data: {
@@ -110,7 +128,7 @@ $(document).ready(function () {
   $('#value').focusout(function () {
     setTimeout(function () {
       $('#value').val('...node value');
-    }, 50);
+    }, 200);
   });
 
   $('#edge').focusin(function () {
@@ -120,7 +138,7 @@ $(document).ready(function () {
   $('#edge').focusout(function () {
     setTimeout(function () {
       $('#edge').val('[FROM NODE]:[TO NODE]');
-    }, 50);
+    }, 200);
   });
 
   var random = function () {
