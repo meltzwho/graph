@@ -15,7 +15,7 @@ $(document).ready(function () {
     }, {
       group: 'edges',
       data: {
-        id: 'e',
+        id: 'ab',
         source: 'a',
         target: 'b'
       }
@@ -66,7 +66,6 @@ $(document).ready(function () {
     var key = parseVal();
     if (cy.$id(key).empty() && key !== '...node value' &&
       key) {
-      console.log('a');
       cy.add({
         group: 'nodes',
         data: {
